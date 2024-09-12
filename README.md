@@ -26,17 +26,24 @@ catkin_make
 
 ## 二、运行Run
 ### 添加工作空间的路径
+
+``` cd {ROS_WORKSPACE} ```
 ```source devel/setup.bash ```
 
 ### 在gazebo中可视化机器人urdf模型
 + 启动一个空白的gazebo环境
+
 ```roslaunch    barrett_model  create_world.launch  ```
+
 + 往gazebo中添加机器人，注意修改view_urdf.launch文件中的机器人模型
+
 ```roslaunch    barrett_model view_urdf.launch  ```
 
 
 ### 启动仿真环境（末端为相机）
+
 + 对应机器人模型 debug2_wam_7dof_wam_bhand.urdf.xacro
+
 ```roslaunch    wam_arm_moveit    wam_kinectv1_bringup_moveit_onlyrobot.launch ```
 
 
@@ -44,5 +51,6 @@ catkin_make
 
 ### 待实现： 启动仿真环境（末端为抓手）
 + 对应机器人模型 debug3_wam_7dof_wam_bhand.urdf.xacro
+
 ```roslaunch    wam_arm_moveit    wam_hand_bringup_moveit_onlyrobot.launch ```
 
