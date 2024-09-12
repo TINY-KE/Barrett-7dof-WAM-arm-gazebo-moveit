@@ -33,7 +33,7 @@
                              '$(find barrett_model)/robots/debug2_wam_7dof_wam_bhand.urdf.xacro'" /> 
     <!-- 在gazebo中加载机器人模型-->
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-          args="-urdf -model mrobot -param robot_description     -R 0.0 -P 0.0 -Y 3.1415926 "/> 
+          args="-urdf -model mrobot -param robot_description     -R 0.0 -P 0.0 -Y 0 "/> 
 
 
 
