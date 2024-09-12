@@ -3,18 +3,27 @@
 # Build
 
 ## 安装所需的ros库：
-'''sudo apt install ros-melodic-joint-state-controller ros-melodic-moveit  ros-melodic-robot-state-publisher  ros-melodic-effort-controllers'''
+'''
+sudo apt install ros-melodic-joint-state-controller ros-melodic-moveit  ros-melodic-robot-state-publisher  ros-melodic-effort-controllers ros-melodic-joint-trajectory-controller
+'''
 
 ## 创建工作空间：
-'''mkdir ws_wam_arm  && cd ws_wam_arm && mkdir src  '''
 
 ## 下载：
-'''cd src'''
-'''git clone https://github.com/TINY-KE/Barrett-7dof-WAM-arm-gazebo-moveit.git'''
+'''
+cd {ROS_WORKSPACE}/src
+'''
+'''
+git clone https://github.com/TINY-KE/Barrett-7dof-WAM-arm-gazebo-moveit.git
+'''
 
 ## 编译
-'''cd ..'''
-'''catkin_make'''
+'''
+cd {ROS_WORKSPACE}
+'''
+'''
+catkin_make
+'''
 
 
 # run
