@@ -8,6 +8,7 @@ sudo apt install ros-melodic-joint-state-controller ros-melodic-moveit  ros-melo
 ```
 
 ### 创建工作空间：
+```mkdir -p {ROS_WORKSPACE}/src```
 
 ### 下载：
 ```cd {ROS_WORKSPACE}/src```
