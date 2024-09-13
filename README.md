@@ -27,9 +27,9 @@ catkin_make
 ### 添加工作空间的路径
 
 ``` 
-cd {ROS_WORKSPACE} 
+cd {ROS_WORKSPACE} ```
 
-source devel/setup.bash ```
+```source devel/setup.bash ```
 
 ### 在gazebo中可视化机器人urdf模型
 + 启动一个空白的gazebo环境
@@ -54,7 +54,7 @@ source devel/setup.bash ```
  ```roslaunch mobile_wam_arm_moveit mobile_wam_kinectv1_bringup_moveit_onlyrobot.launch ```
 
  注：这里的轮子还是外显的，在最终做完实验之后，可以将mobile_chassis.urdf.xacro中动力轮和支撑轮的visual属性删除，以使得展示效果更好。
- 
+
 
 ### 待实现： 启动仿真环境（末端为抓手）
 + 对应机器人模型 debug3_wam_7dof_wam_bhand.urdf.xacro
