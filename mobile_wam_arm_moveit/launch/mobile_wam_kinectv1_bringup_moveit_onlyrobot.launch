@@ -54,16 +54,16 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
 
     <!--  运行joint_state_controller，从而gazebo可以发布 /arm/joint_states -->
-    <rosparam file="$(find wam_arm_moveit)/config/ros_controllers.yaml" command="load"/>
+    <rosparam file="$(find mobile_wam_arm_moveit)/config/ros_controllers.yaml" command="load"/>
     <node name="joint_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
           output="screen" ns="/arm" args="joint_state_controller" />
     
 
 
 <!-- (3)10.12.1 关节轨迹控制器或位置（角度）控制器: ros_control trajectory control dof arm launch file . 原本是整合在gazebo.launch文件中-->
-    <!-- <include file="$(find wam_arm_moveit)/launch/ros_controllers.launch" /> -->
+    <!-- <include file="$(find mobile_wam_arm_moveit)/launch/ros_controllers.launch" /> -->
       <!-- Load joint controller configurations from YAML file to parameter server -->
-        <rosparam file="$(find wam_arm_moveit)/config/ros_controllers.yaml" command="load"/>
+        <rosparam file="$(find mobile_wam_arm_moveit)/config/ros_controllers.yaml" command="load"/>
 
         <!-- Load the controllers -->
         <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
@@ -72,10 +72,10 @@
 
 
 <!-- (4)10.12.2  moveit控制器: moveit launch file. 启动move_group-->
-    <rosparam file="$(find wam_arm_moveit)/config/ros_controllers.yaml" command="load"/>
+    <rosparam file="$(find mobile_wam_arm_moveit)/config/ros_controllers.yaml" command="load"/>
     
     <!-- Run the main MoveIt! executable without trajectory execution (we do not have controllers configured by default) -->
-    <include file="$(find wam_arm_moveit)/launch/move_group.launch">
+    <include file="$(find mobile_wam_arm_moveit)/launch/move_group.launch">
         <arg name="allow_trajectory_execution" value="true"/>
         <arg name="fake_execution" value="false"/>
         <arg name="info" value="true"/>
@@ -84,8 +84,8 @@
     </include>
 
     <!-- Run Rviz and load the default config to see the state of the move_group node -->
-    <include file="$(find wam_arm_moveit)/launch/moveit_rviz.launch">
-        <arg name="rviz_config" value="$(find wam_arm_moveit)/launch/moveit.rviz"/>
+    <include file="$(find mobile_wam_arm_moveit)/launch/moveit_rviz.launch">
+        <arg name="rviz_config" value="$(find mobile_wam_arm_moveit)/launch/moveit.rviz"/>
         <arg name="debug" value="$(arg debug)"/>
     </include>
 
