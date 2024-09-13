@@ -262,12 +262,12 @@
         
 
         <!-- Wheel Definitions -->
-        <wheel lr="right"  translateY="-1" />
-        <wheel lr="left"  translateY="1" />
+        <wheel lr="right"  translateY="-4" />
+        <wheel lr="left"  translateY="4" />
 
         <!-- Casters Definitions -->
-        <caster fb="front"  translateX="-1" />
-        <caster fb="back"  translateX="1" />
+        <caster fb="front"  translateX="-4" />
+        <caster fb="back"  translateX="4" />
 
         <!--  plates and standoff Definitions -->
         <!-- <mrobot_standoff_2in parent="base_link" number="1" x_loc="-${standoff_x/2 + 0.03}" y_loc="-${standoff_y - 0.03}" z_loc="${plate_height/2}"/>
