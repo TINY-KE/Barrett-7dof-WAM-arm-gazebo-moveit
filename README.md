@@ -18,8 +18,7 @@ sudo apt install ros-melodic-joint-state-controller ros-melodic-moveit  ros-melo
 ### 编译
 ```
 cd {ROS_WORKSPACE}
-```
-```
+
 catkin_make
 ```
 
@@ -27,8 +26,10 @@ catkin_make
 ## 二、运行Run
 ### 添加工作空间的路径
 
-``` cd {ROS_WORKSPACE} ```
-```source devel/setup.bash ```
+``` 
+cd {ROS_WORKSPACE} 
+
+source devel/setup.bash ```
 
 ### 在gazebo中可视化机器人urdf模型
 + 启动一个空白的gazebo环境

@@ -45,7 +45,7 @@
   </xacro:macro>
 
   <!-- [2]  pose from camera to robot -->
-  <xacro:property name="cam_px" value="0" />
+  <xacro:property name="cam_px" value="0.02" />
 	<xacro:property name="cam_pz" value="0" />
 	<xacro:property name="cam_or" value="0" />
 	<xacro:property name="cam_op" value="0" />
@@ -54,9 +54,9 @@
 
 
   <!-- [3]  Parameterised in part by the values in turtlebot_properties.urdf.xacro -->
-  <xacro:macro name="sensor_kinect" params="parent cam_pz_input">
+  <xacro:macro name="sensor_kinect" params="parent cam_px_input cam_pz_input">
     <joint name="camera_rgb_joint" type="fixed">
-      <origin xyz="${cam_px} ${kinect_cam_py} ${cam_pz_input}" rpy="${cam_or} ${cam_op} ${cam_oy}"/>
+      <origin xyz="${cam_px_input} ${kinect_cam_py} ${cam_pz_input}" rpy="${cam_or} ${cam_op} ${cam_oy}"/>
       <parent link="${parent}"/>
       <child link="camera_rgb_frame" />
     </joint>

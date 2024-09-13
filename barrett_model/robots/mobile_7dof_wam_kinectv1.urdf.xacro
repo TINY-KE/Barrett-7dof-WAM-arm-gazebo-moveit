@@ -8,17 +8,21 @@
   <material name="WAMGrey">
     <color rgba="0.7 0.7 0.7 1.0"/>
   </material>
-  <!-- Root link is in the world frame-->
-  <!-- <link name="world"/>
+
+  <!-- <xacro:include filename="$(find barrett_model)/robots/test_robot.urdf.xacro" /> -->
+	<xacro:include filename="$(find barrett_model)/robots/mobile_chassis.urdf.xacro" />
+  <mrobot_body/>
+
   <joint name="wam/wam_fixed_joint" type="fixed">
-    <parent link="world"/>
+    <parent link="base_footprint"/>
     <child link="wam/base_link"/>
-    <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.103"/>
   </joint>
   <gazebo reference="wam/wam_fixed_joint">
     <provideFeedback>true</provideFeedback>
     <implicitSpringDamper>true</implicitSpringDamper>
-  </gazebo> -->
+  </gazebo>
+
 
   <link name="wam/base_link">
     <inertial>
@@ -36,7 +40,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://barrett_model/models/sw_meshes/base_link_convex.dae"/>
+        <!-- <mesh filename="package://barrett_model/models/sw_meshes/base_link_convex.dae"/> -->
       </geometry>
     </collision>
   </link>
@@ -396,6 +400,7 @@
         <legacyModeNS>true</legacyModeNS>
     </plugin>
   </gazebo>
+
 
 </robot>
 
