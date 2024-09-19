@@ -130,7 +130,9 @@
     <child link="wam/upper_arm_link"/>
     <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="45" lower="-2.79999681239" upper="2.79999681239" velocity="2.0"/>
+    <!-- <limit effort="45" lower="-2.79999681239" upper="2.79999681239" velocity="2.0"/> -->
+    <limit effort="45" lower="-3.9999681239" upper="3.79999681239" velocity="2.0"/>
+    <!-- this is joint 3 -->
     <dynamics damping="1.65" friction="0"/>
   </joint>
   <gazebo reference="wam/shoulder_yaw_joint">
@@ -228,7 +230,9 @@
     <child link="wam/wrist_yaw_link"/>
     <origin rpy="1.57079632679 0 0" xyz="-0.045 -0.3 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-4.55000354678" upper="1.25000481028" velocity="2.0"/>
+    <!-- <limit effort="10" lower="-4.55000354678" upper="1.25000481028" velocity="2.0"/> -->
+    <limit effort="10" lower="-4.55000354678" upper="2.25000481028" velocity="2.0"/>
+    <!-- this is joint 5 -->
     <dynamics damping="0.55" friction="0"/>
   </joint>
   <gazebo reference="wam/wrist_yaw_joint">

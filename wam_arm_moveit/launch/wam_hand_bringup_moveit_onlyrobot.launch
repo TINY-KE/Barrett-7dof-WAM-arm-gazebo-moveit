@@ -13,7 +13,6 @@
 <!-- (1)启动gazebo仿真环境: launch the gazebo simulator and spawn the robot -->
     <!-- 设置Gazebo specific options  -->
     <arg name="world_name" value="$(find wam_arm_moveit)/world/nine_highdesk_1.world"/>  
-    <!-- $(find gazebo_object_env)/world/nine_desk_wall.world    $(find mrobot_gazebo)/worlds/cloister.world-->
     <arg name="paused" default="false"/>
     <arg name="use_sim_time" default="true"/>
     <arg name="gui" default="true"/>

@@ -11,4 +11,4 @@ controller_list:
       - wam/palm_yaw_joint
 initial:  # Define initial robot poses.
   - group: arm
-    pose: Init
+    pose: Init_pose

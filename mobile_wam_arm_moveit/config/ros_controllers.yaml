@@ -1,7 +1,7 @@
 # Simulation settings for using moveit_sim_controllers
 moveit_sim_hw_interface:
   joint_model_group: arm
-  joint_model_group_pose: Init
+  joint_model_group_pose: Observe_pose
 # Settings for ros_control_boilerplate control loop
 generic_hw_control_loop:
   loop_hz: 300
@@ -91,3 +91,7 @@ arm:
         d: 1
         i: 1
         i_clamp: 1
+
+initial:  # Define initial robot poses.
+  - group: arm
+    pose: Observe_pose

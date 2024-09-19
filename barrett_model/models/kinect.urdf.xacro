@@ -81,7 +81,7 @@
             <mesh filename="package://barrett_model/models/kinect.dae"/>
         </geometry>
       </visual>
-  	  <collision>
+  	  <collision>s
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   	    <geometry>
   	      <box size="0.07271 0.27794 0.073"/>
